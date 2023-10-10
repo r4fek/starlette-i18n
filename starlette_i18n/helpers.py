@@ -34,7 +34,7 @@ def parse_language_header(language_header: str) -> t.List[LocaleInfo]:
         if not locale_code or locale_code in locales_code:
             continue
 
-        locales.append(LocaleInfo(code=locale_code, weight=weight))
+        locales.append(LocaleInfo(code=locale_code.replace('-', '_'), weight=weight))
         locales_code.add(locale_code)
 
     return locales
