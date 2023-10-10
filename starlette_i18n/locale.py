@@ -57,6 +57,7 @@ gettext_translations = _GettextTranslations()
 @dataclass
 class Locale:
     language: str
+    language_name: str
     translations: NullTranslations
     territory: t.Optional[str] = None
     script: t.Optional[str] = None
@@ -71,6 +72,7 @@ class Locale:
         locale = OriginLocale.parse(code)
         return cls(
             language=locale.language,
+            language_name=locale.language_name,
             translations=gettext_translations.translations.get(code, NullTranslations()),
             territory=locale.territory,
             script=locale.script,
