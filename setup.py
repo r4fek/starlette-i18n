@@ -29,7 +29,7 @@ CLASSIFIERS = [
 
 setup(
     name="starlette-i18n",
-    version='2.0.2',
+    version="2.0.3",
     license="Apache License, Version 2.0",
     description="Localisation helper for starlette",
     long_description=readme,
